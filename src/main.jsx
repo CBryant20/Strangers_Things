@@ -2,21 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import { Provider } from "react-redux";
 import store from "./store/store.js";
+import { Provider } from "react-redux";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout/Root.jsx";
+import AuthForm from "./features/auth/AuthForm.jsx";
+import Books from "./features/books/books";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
-      { path: "", element: <Books /> },
-      { path: "stranger", element: <Books /> },
-      { path: "stranger/:id", element: <AuthForm /> },
+      { path: "/home", element: <Books /> },
+      { path: "/login", element: <AuthForm /> },
     ],
   },
 ]);
