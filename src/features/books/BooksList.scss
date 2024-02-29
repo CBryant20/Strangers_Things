@@ -1,0 +1,25 @@
+.book-list {
+  list-style: none;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+
+  li {
+    width: 15rem;
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 75%;
+    }
+  }
+}

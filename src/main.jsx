@@ -8,14 +8,16 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout/Root.jsx";
 import AuthForm from "./features/auth/AuthForm.jsx";
-import Books from "./features/books/books";
+import BooksList from "./features/books/BooksList.jsx";
+import BooksDetails from "./features/books/BooksDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
-      { path: "/home", element: <Books /> },
+      { path: "/book", element: <BooksList /> },
+      { path: "/book/:id", element: <BooksDetails /> },
       { path: "/login", element: <AuthForm /> },
     ],
   },

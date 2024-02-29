@@ -29,7 +29,7 @@ export default function AuthForm() {
 
     try {
       await authMethod(credentials).unwrap();
-      navigate("/home");
+      navigate("/book");
     } catch (err) {
       console.error(err);
     }
